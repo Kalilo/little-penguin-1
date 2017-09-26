@@ -1,0 +1,679 @@
+-- Logs begin at Sun 2017-08-20 11:07:22 SAST, end at Tue 2017-09-26 13:10:30 SAST. --
+Sep 26 12:54:02 khansman kernel: Linux version 4.14.0-rc2khansman-lfs-0.0.2 (kalilo@khansman) (gcc version 6.3.0 (GCC)) #2 SMP Tue Sep 26 09:59:37 SAST 2017
+Sep 26 12:54:02 khansman kernel: Command line: BOOT_IMAGE=/boot/vmlinuz-4.14.0-rc2khansman root=/dev/sda3 ro
+Sep 26 12:54:02 khansman kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+Sep 26 12:54:02 khansman kernel: x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+Sep 26 12:54:02 khansman kernel: x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+Sep 26 12:54:02 khansman kernel: x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+Sep 26 12:54:02 khansman kernel: x86/fpu: Enabled xstate features 0x7, context size is 832 bytes, using 'standard' format.
+Sep 26 12:54:02 khansman kernel: e820: BIOS-provided physical RAM map:
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x000000000009fc00-0x000000000009ffff] reserved
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x00000000000f0000-0x00000000000fffff] reserved
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x0000000000100000-0x000000007ffeffff] usable
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x000000007fff0000-0x000000007fffffff] ACPI data
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x00000000fec00000-0x00000000fec00fff] reserved
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x00000000fee00000-0x00000000fee00fff] reserved
+Sep 26 12:54:02 khansman kernel: BIOS-e820: [mem 0x00000000fffc0000-0x00000000ffffffff] reserved
+Sep 26 12:54:02 khansman kernel: NX (Execute Disable) protection: active
+Sep 26 12:54:02 khansman kernel: random: fast init done
+Sep 26 12:54:02 khansman kernel: SMBIOS 2.5 present.
+Sep 26 12:54:02 khansman kernel: DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
+Sep 26 12:54:02 khansman kernel: Hypervisor detected: KVM
+Sep 26 12:54:02 khansman kernel: tsc: Fast TSC calibration failed
+Sep 26 12:54:02 khansman kernel: tsc: Unable to calibrate against PIT
+Sep 26 12:54:02 khansman kernel: tsc: No reference (HPET/PMTIMER) available
+Sep 26 12:54:02 khansman kernel: e820: update [mem 0x00000000-0x00000fff] usable ==> reserved
+Sep 26 12:54:02 khansman kernel: e820: remove [mem 0x000a0000-0x000fffff] usable
+Sep 26 12:54:02 khansman kernel: e820: last_pfn = 0x7fff0 max_arch_pfn = 0x400000000
+Sep 26 12:54:02 khansman kernel: MTRR default type: uncachable
+Sep 26 12:54:02 khansman kernel: MTRR variable ranges disabled:
+Sep 26 12:54:02 khansman kernel: MTRR: Disabled
+Sep 26 12:54:02 khansman kernel: x86/PAT: MTRRs disabled, skipping PAT initialization too.
+Sep 26 12:54:02 khansman kernel: CPU MTRRs all blank - virtualized system.
+Sep 26 12:54:02 khansman kernel: x86/PAT: Configuration [0-7]: WB  WT  UC- UC  WB  WT  UC- UC  
+Sep 26 12:54:02 khansman kernel: found SMP MP-table at [mem 0x0009fff0-0x0009ffff] mapped at [ffffffffff200ff0]
+Sep 26 12:54:02 khansman kernel: Scanning 1 areas for low memory corruption
+Sep 26 12:54:02 khansman kernel: Base memory trampoline at [ffff880000099000] 99000 size 24576
+Sep 26 12:54:02 khansman kernel: BRK [0x027fe000, 0x027fefff] PGTABLE
+Sep 26 12:54:02 khansman kernel: BRK [0x027ff000, 0x027fffff] PGTABLE
+Sep 26 12:54:02 khansman kernel: BRK [0x02800000, 0x02800fff] PGTABLE
+Sep 26 12:54:02 khansman kernel: BRK [0x02801000, 0x02801fff] PGTABLE
+Sep 26 12:54:02 khansman kernel: BRK [0x02802000, 0x02802fff] PGTABLE
+Sep 26 12:54:02 khansman kernel: ACPI: Early table checksum verification disabled
+Sep 26 12:54:02 khansman kernel: ACPI: RSDP 0x00000000000E0000 000024 (v02 VBOX  )
+Sep 26 12:54:02 khansman kernel: ACPI: XSDT 0x000000007FFF0030 00003C (v01 VBOX   VBOXXSDT 00000001 ASL  00000061)
+Sep 26 12:54:02 khansman kernel: ACPI: FACP 0x000000007FFF00F0 0000F4 (v04 VBOX   VBOXFACP 00000001 ASL  00000061)
+Sep 26 12:54:02 khansman kernel: ACPI: DSDT 0x000000007FFF0480 0021C8 (v02 VBOX   VBOXBIOS 00000002 INTL 20100528)
+Sep 26 12:54:02 khansman kernel: ACPI: FACS 0x000000007FFF0200 000040
+Sep 26 12:54:02 khansman kernel: ACPI: FACS 0x000000007FFF0200 000040
+Sep 26 12:54:02 khansman kernel: ACPI: APIC 0x000000007FFF0240 00006C (v02 VBOX   VBOXAPIC 00000001 ASL  00000061)
+Sep 26 12:54:02 khansman kernel: ACPI: SSDT 0x000000007FFF02B0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+Sep 26 12:54:02 khansman kernel: ACPI: Local APIC address 0xfee00000
+Sep 26 12:54:02 khansman kernel: No NUMA configuration found
+Sep 26 12:54:02 khansman kernel: Faking a node at [mem 0x0000000000000000-0x000000007ffeffff]
+Sep 26 12:54:02 khansman kernel: NODE_DATA(0) allocated [mem 0x7ffec000-0x7ffeffff]
+Sep 26 12:54:02 khansman kernel: kvm-clock: Using msrs 4b564d01 and 4b564d00
+Sep 26 12:54:02 khansman kernel: kvm-clock: cpu 0, msr 0:7ffeb001, primary cpu clock
+Sep 26 12:54:02 khansman kernel: kvm-clock: using sched offset of 63777980949 cycles
+Sep 26 12:54:02 khansman kernel: clocksource: kvm-clock: mask: 0xffffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+Sep 26 12:54:02 khansman kernel: Zone ranges:
+Sep 26 12:54:02 khansman kernel:   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+Sep 26 12:54:02 khansman kernel:   DMA32    [mem 0x0000000001000000-0x000000007ffeffff]
+Sep 26 12:54:02 khansman kernel:   Normal   empty
+Sep 26 12:54:02 khansman kernel: Movable zone start for each node
+Sep 26 12:54:02 khansman kernel: Early memory node ranges
+Sep 26 12:54:02 khansman kernel:   node   0: [mem 0x0000000000001000-0x000000000009efff]
+Sep 26 12:54:02 khansman kernel:   node   0: [mem 0x0000000000100000-0x000000007ffeffff]
+Sep 26 12:54:02 khansman kernel: Initmem setup node 0 [mem 0x0000000000001000-0x000000007ffeffff]
+Sep 26 12:54:02 khansman kernel: On node 0 totalpages: 524174
+Sep 26 12:54:02 khansman kernel:   DMA zone: 64 pages used for memmap
+Sep 26 12:54:02 khansman kernel:   DMA zone: 21 pages reserved
+Sep 26 12:54:02 khansman kernel:   DMA zone: 3998 pages, LIFO batch:0
+Sep 26 12:54:02 khansman kernel:   DMA32 zone: 8128 pages used for memmap
+Sep 26 12:54:02 khansman kernel:   DMA32 zone: 520176 pages, LIFO batch:31
+Sep 26 12:54:02 khansman kernel: ACPI: PM-Timer IO Port: 0x4008
+Sep 26 12:54:02 khansman kernel: ACPI: Local APIC address 0xfee00000
+Sep 26 12:54:02 khansman kernel: IOAPIC[0]: apic_id 4, version 32, address 0xfec00000, GSI 0-23
+Sep 26 12:54:02 khansman kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 0 global_irq 2 dfl dfl)
+Sep 26 12:54:02 khansman kernel: ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+Sep 26 12:54:02 khansman kernel: ACPI: IRQ0 used by override.
+Sep 26 12:54:02 khansman kernel: ACPI: IRQ9 used by override.
+Sep 26 12:54:02 khansman kernel: Using ACPI (MADT) for SMP configuration information
+Sep 26 12:54:02 khansman kernel: smpboot: Allowing 4 CPUs, 0 hotplug CPUs
+Sep 26 12:54:02 khansman kernel: PM: Registered nosave memory: [mem 0x00000000-0x00000fff]
+Sep 26 12:54:02 khansman kernel: PM: Registered nosave memory: [mem 0x0009f000-0x0009ffff]
+Sep 26 12:54:02 khansman kernel: PM: Registered nosave memory: [mem 0x000a0000-0x000effff]
+Sep 26 12:54:02 khansman kernel: PM: Registered nosave memory: [mem 0x000f0000-0x000fffff]
+Sep 26 12:54:02 khansman kernel: e820: [mem 0x80000000-0xfebfffff] available for PCI devices
+Sep 26 12:54:02 khansman kernel: Booting paravirtualized kernel on KVM
+Sep 26 12:54:02 khansman kernel: clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+Sep 26 12:54:02 khansman kernel: setup_percpu: NR_CPUS:64 nr_cpumask_bits:64 nr_cpu_ids:4 nr_node_ids:1
+Sep 26 12:54:02 khansman kernel: percpu: Embedded 38 pages/cpu @ffff88007fc00000 s117272 r8192 d30184 u524288
+Sep 26 12:54:02 khansman kernel: pcpu-alloc: s117272 r8192 d30184 u524288 alloc=1*2097152
+Sep 26 12:54:02 khansman kernel: pcpu-alloc: [0] 0 1 2 3 
+Sep 26 12:54:02 khansman kernel: PV qspinlock hash table entries: 256 (order: 0, 4096 bytes)
+Sep 26 12:54:02 khansman kernel: Built 1 zonelists, mobility grouping on.  Total pages: 515961
+Sep 26 12:54:02 khansman kernel: Policy zone: DMA32
+Sep 26 12:54:02 khansman kernel: Kernel command line: kernel->  BOOT_IMAGE=/boot/vmlinuz-4.14.0-rc2khansman root=/dev/sda3 ro
+Sep 26 12:54:02 khansman kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+Sep 26 12:54:02 khansman kernel: Calgary: detecting Calgary via BIOS EBDA area
+Sep 26 12:54:02 khansman kernel: Calgary: Unable to locate Rio Grande table in EBDA - bailing!
+Sep 26 12:54:02 khansman kernel: Memory: 2038556K/2096696K available (13752K kernel code, 1706K rwdata, 4168K rodata, 1468K init, 736K bss, 58140K reserved, 0K cma-reserved)
+Sep 26 12:54:02 khansman kernel: SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+Sep 26 12:54:02 khansman kernel: Hierarchical RCU implementation.
+Sep 26 12:54:02 khansman kernel:         RCU restricting CPUs from NR_CPUS=64 to nr_cpu_ids=4.
+Sep 26 12:54:02 khansman kernel: RCU: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+Sep 26 12:54:02 khansman kernel: NR_IRQS: 4352, nr_irqs: 456, preallocated irqs: 16
+Sep 26 12:54:02 khansman kernel: Console: colour VGA+ 80x25
+Sep 26 12:54:02 khansman kernel: console [tty0] enabled
+Sep 26 12:54:02 khansman kernel: tsc: Detected 2793.532 MHz processor
+Sep 26 12:54:02 khansman kernel: Calibrating delay loop (skipped) preset value.. 5587.06 BogoMIPS (lpj=2793532)
+Sep 26 12:54:02 khansman kernel: pid_max: default: 32768 minimum: 301
+Sep 26 12:54:02 khansman kernel: ACPI: Core revision 20170728
+Sep 26 12:54:02 khansman kernel: ACPI: 2 ACPI AML tables successfully acquired and loaded
+Sep 26 12:54:02 khansman kernel: Security Framework initialized
+Sep 26 12:54:02 khansman kernel: Dentry cache hash table entries: 262144 (order: 9, 2097152 bytes)
+Sep 26 12:54:02 khansman kernel: Inode-cache hash table entries: 131072 (order: 8, 1048576 bytes)
+Sep 26 12:54:02 khansman kernel: Mount-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Sep 26 12:54:02 khansman kernel: Mountpoint-cache hash table entries: 4096 (order: 3, 32768 bytes)
+Sep 26 12:54:02 khansman kernel: CPU: Physical Processor ID: 0
+Sep 26 12:54:02 khansman kernel: CPU: Processor Core ID: 0
+Sep 26 12:54:02 khansman kernel: mce: CPU supports 0 MCE banks
+Sep 26 12:54:02 khansman kernel: Last level iTLB entries: 4KB 128, 2MB 8, 4MB 8
+Sep 26 12:54:02 khansman kernel: Last level dTLB entries: 4KB 64, 2MB 0, 4MB 0, 1GB 4
+Sep 26 12:54:02 khansman kernel: Freeing SMP alternatives memory: 52K
+Sep 26 12:54:02 khansman kernel: smpboot: Max logical packages: 1
+Sep 26 12:54:02 khansman kernel: ..TIMER: vector=0x30 apic1=0 pin1=2 apic2=-1 pin2=-1
+Sep 26 12:54:02 khansman kernel: smpboot: CPU0: Intel(R) Core(TM) i5-5575R CPU @ 2.80GHz (family: 0x6, model: 0x47, stepping: 0x1)
+Sep 26 12:54:02 khansman kernel: Performance Events: unsupported p6 CPU model 71 no PMU driver, software events only.
+Sep 26 12:54:02 khansman kernel: Hierarchical SRCU implementation.
+Sep 26 12:54:02 khansman kernel: smp: Bringing up secondary CPUs ...
+Sep 26 12:54:02 khansman kernel: x86: Booting SMP configuration:
+Sep 26 12:54:02 khansman kernel: .... node  #0, CPUs:      #1
+Sep 26 12:54:02 khansman kernel: kvm-clock: cpu 1, msr 0:7ffeb041, secondary cpu clock
+Sep 26 12:54:02 khansman kernel: mce: CPU supports 0 MCE banks
+Sep 26 12:54:02 khansman kernel:  #2
+Sep 26 12:54:02 khansman kernel: kvm-clock: cpu 2, msr 0:7ffeb081, secondary cpu clock
+Sep 26 12:54:02 khansman kernel: mce: CPU supports 0 MCE banks
+Sep 26 12:54:02 khansman kernel:  #3
+Sep 26 12:54:02 khansman kernel: kvm-clock: cpu 3, msr 0:7ffeb0c1, secondary cpu clock
+Sep 26 12:54:02 khansman kernel: mce: CPU supports 0 MCE banks
+Sep 26 12:54:02 khansman kernel: smp: Brought up 1 node, 4 CPUs
+Sep 26 12:54:02 khansman kernel: smpboot: Total of 4 processors activated (22348.25 BogoMIPS)
+Sep 26 12:54:02 khansman kernel: devtmpfs: initialized
+Sep 26 12:54:02 khansman kernel: clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+Sep 26 12:54:02 khansman kernel: futex hash table entries: 1024 (order: 4, 65536 bytes)
+Sep 26 12:54:02 khansman kernel: xor: automatically using best checksumming function   avx       
+Sep 26 12:54:02 khansman kernel: prandom: seed boundary self test passed
+Sep 26 12:54:02 khansman kernel: prandom: 100 self tests passed
+Sep 26 12:54:02 khansman kernel: pinctrl core: initialized pinctrl subsystem
+Sep 26 12:54:02 khansman kernel: RTC time: 10:52:53, date: 09/26/17
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 16
+Sep 26 12:54:02 khansman kernel: cpuidle: using governor ladder
+Sep 26 12:54:02 khansman kernel: cpuidle: using governor menu
+Sep 26 12:54:02 khansman kernel: ACPI: bus type PCI registered
+Sep 26 12:54:02 khansman kernel: PCI: Using configuration type 1 for base access
+Sep 26 12:54:02 khansman kernel: HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+Sep 26 12:54:02 khansman kernel: raid6: sse2x1   gen() 10941 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: sse2x1   xor()  7109 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: sse2x2   gen() 11843 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: sse2x2   xor()  7761 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: sse2x4   gen() 13878 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: sse2x4   xor() 10707 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: using algorithm sse2x4 gen() 13878 MB/s
+Sep 26 12:54:02 khansman kernel: raid6: .... xor() 10707 MB/s, rmw enabled
+Sep 26 12:54:02 khansman kernel: raid6: using ssse3x2 recovery algorithm
+Sep 26 12:54:02 khansman kernel: ACPI: Added _OSI(Module Device)
+Sep 26 12:54:02 khansman kernel: ACPI: Added _OSI(Processor Device)
+Sep 26 12:54:02 khansman kernel: ACPI: Added _OSI(3.0 _SCP Extensions)
+Sep 26 12:54:02 khansman kernel: ACPI: Added _OSI(Processor Aggregator Device)
+Sep 26 12:54:02 khansman kernel: ACPI: Executed 1 blocks of module-level executable AML code
+Sep 26 12:54:02 khansman kernel: ACPI: Interpreter enabled
+Sep 26 12:54:02 khansman kernel: ACPI: (supports S0 S5)
+Sep 26 12:54:02 khansman kernel: ACPI: Using IOAPIC for interrupt routing
+Sep 26 12:54:02 khansman kernel: PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+Sep 26 12:54:02 khansman kernel: ACPI: Enabled 2 GPEs in block 00 to 07
+Sep 26 12:54:02 khansman kernel: ACPI: PCI Root Bridge [PCI0] (domain 0000 [bus 00-ff])
+Sep 26 12:54:02 khansman kernel: acpi PNP0A03:00: _OSC: OS supports [ASPM ClockPM Segments MSI]
+Sep 26 12:54:02 khansman kernel: acpi PNP0A03:00: _OSC failed (AE_NOT_FOUND); disabling ASPM
+Sep 26 12:54:02 khansman kernel: acpi PNP0A03:00: fail to add MMCONFIG information, can't access extended PCI configuration space under this bridge.
+Sep 26 12:54:02 khansman kernel: PCI host bridge to bus 0000:00
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: root bus resource [io  0x0000-0x0cf7 window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: root bus resource [io  0x0d00-0xffff window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: root bus resource [mem 0x000a0000-0x000bffff window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: root bus resource [mem 0x80000000-0xffdfffff window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: root bus resource [bus 00-ff]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:00.0: [8086:1237] type 00 class 0x060000
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.0: [8086:7000] type 00 class 0x060100
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: [8086:7111] type 00 class 0x01018a
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: reg 0x20: [io  0xd000-0xd00f]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x10: [io  0x01f0-0x01f7]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x14: [io  0x03f6]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x18: [io  0x0170-0x0177]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.1: legacy IDE quirk: reg 0x1c: [io  0x0376]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: [80ee:beef] type 00 class 0x030000
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: reg 0x10: [mem 0xe0000000-0xe0ffffff pref]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:03.0: [8086:100e] type 00 class 0x020000
+Sep 26 12:54:02 khansman kernel: pci 0000:00:03.0: reg 0x10: [mem 0xf0000000-0xf001ffff]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:03.0: reg 0x18: [io  0xd010-0xd017]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:04.0: [80ee:cafe] type 00 class 0x088000
+Sep 26 12:54:02 khansman kernel: pci 0000:00:04.0: reg 0x10: [io  0xd020-0xd03f]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:04.0: reg 0x14: [mem 0xf0400000-0xf07fffff]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:04.0: reg 0x18: [mem 0xf0800000-0xf0803fff pref]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:05.0: [8086:2415] type 00 class 0x040100
+Sep 26 12:54:02 khansman kernel: pci 0000:00:05.0: reg 0x10: [io  0xd100-0xd1ff]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:05.0: reg 0x14: [io  0xd200-0xd23f]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:06.0: [106b:003f] type 00 class 0x0c0310
+Sep 26 12:54:02 khansman kernel: pci 0000:00:06.0: reg 0x10: [mem 0xf0804000-0xf0804fff]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:07.0: [8086:7113] type 00 class 0x068000
+Sep 26 12:54:02 khansman kernel: pci 0000:00:07.0: quirk: [io  0x4000-0x403f] claimed by PIIX4 ACPI
+Sep 26 12:54:02 khansman kernel: pci 0000:00:07.0: quirk: [io  0x4100-0x410f] claimed by PIIX4 SMB
+Sep 26 12:54:02 khansman kernel: pci 0000:00:0d.0: [8086:2829] type 00 class 0x010601
+Sep 26 12:54:02 khansman kernel: pci 0000:00:0d.0: reg 0x10: [io  0xd240-0xd247]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:0d.0: reg 0x18: [io  0xd250-0xd257]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:0d.0: reg 0x20: [io  0xd260-0xd26f]
+Sep 26 12:54:02 khansman kernel: pci 0000:00:0d.0: reg 0x24: [mem 0xf0806000-0xf0807fff]
+Sep 26 12:54:02 khansman kernel: ACPI: PCI Interrupt Link [LNKA] (IRQs 5 9 10 *11)
+Sep 26 12:54:02 khansman kernel: ACPI: PCI Interrupt Link [LNKB] (IRQs 5 9 10 *11)
+Sep 26 12:54:02 khansman kernel: ACPI: PCI Interrupt Link [LNKC] (IRQs 5 9 *10 11)
+Sep 26 12:54:02 khansman kernel: ACPI: PCI Interrupt Link [LNKD] (IRQs 5 *9 10 11)
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: vgaarb: setting as boot VGA device
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: vgaarb: VGA device added: decodes=io+mem,owns=io+mem,locks=none
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: vgaarb: bridge control possible
+Sep 26 12:54:02 khansman kernel: vgaarb: loaded
+Sep 26 12:54:02 khansman kernel: SCSI subsystem initialized
+Sep 26 12:54:02 khansman kernel: libata version 3.00 loaded.
+Sep 26 12:54:02 khansman kernel: ACPI: bus type USB registered
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver usbfs
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver hub
+Sep 26 12:54:02 khansman kernel: usbcore: registered new device driver usb
+Sep 26 12:54:02 khansman kernel: media: Linux media interface: v0.10
+Sep 26 12:54:02 khansman kernel: Linux video capture interface: v2.00
+Sep 26 12:54:02 khansman kernel: pps_core: LinuxPPS API ver. 1 registered
+Sep 26 12:54:02 khansman kernel: pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+Sep 26 12:54:02 khansman kernel: PTP clock support registered
+Sep 26 12:54:02 khansman kernel: EDAC MC: Ver: 3.0.0
+Sep 26 12:54:02 khansman kernel: Advanced Linux Sound Architecture Driver Initialized.
+Sep 26 12:54:02 khansman kernel: PCI: Using ACPI for IRQ routing
+Sep 26 12:54:02 khansman kernel: PCI: pci_cache_line_size set to 64 bytes
+Sep 26 12:54:02 khansman kernel: e820: reserve RAM buffer [mem 0x0009fc00-0x0009ffff]
+Sep 26 12:54:02 khansman kernel: e820: reserve RAM buffer [mem 0x7fff0000-0x7fffffff]
+Sep 26 12:54:02 khansman kernel: Bluetooth: Core ver 2.22
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 31
+Sep 26 12:54:02 khansman kernel: Bluetooth: HCI device and connection manager initialized
+Sep 26 12:54:02 khansman kernel: Bluetooth: HCI socket layer initialized
+Sep 26 12:54:02 khansman kernel: Bluetooth: L2CAP socket layer initialized
+Sep 26 12:54:02 khansman kernel: Bluetooth: SCO socket layer initialized
+Sep 26 12:54:02 khansman kernel: NetLabel: Initializing
+Sep 26 12:54:02 khansman kernel: NetLabel:  domain hash size = 128
+Sep 26 12:54:02 khansman kernel: NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+Sep 26 12:54:02 khansman kernel: NetLabel:  unlabeled traffic allowed by default
+Sep 26 12:54:02 khansman kernel: clocksource: Switched to clocksource kvm-clock
+Sep 26 12:54:02 khansman kernel: VFS: Disk quotas dquot_6.6.0
+Sep 26 12:54:02 khansman kernel: VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+Sep 26 12:54:02 khansman kernel: pnp: PnP ACPI init
+Sep 26 12:54:02 khansman kernel: pnp 00:00: Plug and Play ACPI device, IDs PNP0303 (active)
+Sep 26 12:54:02 khansman kernel: pnp 00:01: Plug and Play ACPI device, IDs PNP0f03 (active)
+Sep 26 12:54:02 khansman kernel: pnp: PnP ACPI: found 2 devices
+Sep 26 12:54:02 khansman kernel: clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: resource 4 [io  0x0000-0x0cf7 window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: resource 5 [io  0x0d00-0xffff window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: resource 6 [mem 0x000a0000-0x000bffff window]
+Sep 26 12:54:02 khansman kernel: pci_bus 0000:00: resource 7 [mem 0x80000000-0xffdfffff window]
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 2
+Sep 26 12:54:02 khansman kernel: TCP established hash table entries: 16384 (order: 5, 131072 bytes)
+Sep 26 12:54:02 khansman kernel: TCP bind hash table entries: 16384 (order: 6, 262144 bytes)
+Sep 26 12:54:02 khansman kernel: TCP: Hash tables configured (established 16384 bind 16384)
+Sep 26 12:54:02 khansman kernel: UDP hash table entries: 1024 (order: 3, 32768 bytes)
+Sep 26 12:54:02 khansman kernel: UDP-Lite hash table entries: 1024 (order: 3, 32768 bytes)
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 1
+Sep 26 12:54:02 khansman kernel: RPC: Registered named UNIX socket transport module.
+Sep 26 12:54:02 khansman kernel: RPC: Registered udp transport module.
+Sep 26 12:54:02 khansman kernel: RPC: Registered tcp transport module.
+Sep 26 12:54:02 khansman kernel: RPC: Registered tcp NFSv4.1 backchannel transport module.
+Sep 26 12:54:02 khansman kernel: pci 0000:00:00.0: Limiting direct PCI/PCI transfers
+Sep 26 12:54:02 khansman kernel: pci 0000:00:01.0: Activating ISA DMA hang workarounds
+Sep 26 12:54:02 khansman kernel: pci 0000:00:02.0: Video device with shadowed ROM at [mem 0x000c0000-0x000dffff]
+Sep 26 12:54:02 khansman kernel: PCI: CLS 0 bytes, default 64
+Sep 26 12:54:02 khansman kernel: RAPL PMU: API unit is 2^-32 Joules, 4 fixed counters, 10737418240 ms ovfl timer
+Sep 26 12:54:02 khansman kernel: RAPL PMU: hw unit of domain pp0-core 2^-0 Joules
+Sep 26 12:54:02 khansman kernel: RAPL PMU: hw unit of domain package 2^-0 Joules
+Sep 26 12:54:02 khansman kernel: RAPL PMU: hw unit of domain dram 2^-0 Joules
+Sep 26 12:54:02 khansman kernel: RAPL PMU: hw unit of domain pp1-gpu 2^-0 Joules
+Sep 26 12:54:02 khansman kernel: kvm: no hardware support
+Sep 26 12:54:02 khansman kernel: platform rtc_cmos: registered platform RTC device (no PNP device found)
+Sep 26 12:54:02 khansman kernel: Scanning for low memory corruption every 60 seconds
+Sep 26 12:54:02 khansman kernel: cryptomgr_test (45) used greatest stack depth: 15456 bytes left
+Sep 26 12:54:02 khansman kernel: cryptomgr_test (46) used greatest stack depth: 15248 bytes left
+Sep 26 12:54:02 khansman kernel: cryptomgr_test (48) used greatest stack depth: 15088 bytes left
+Sep 26 12:54:02 khansman kernel: AVX2 or AES-NI instructions are not detected.
+Sep 26 12:54:02 khansman kernel: AVX2 instructions are not detected.
+Sep 26 12:54:02 khansman kernel: workingset: timestamp_bits=40 max_order=19 bucket_order=0
+Sep 26 12:54:02 khansman kernel: NFS: Registering the id_resolver key type
+Sep 26 12:54:02 khansman kernel: Key type id_resolver registered
+Sep 26 12:54:02 khansman kernel: Key type id_legacy registered
+Sep 26 12:54:02 khansman kernel: async_tx: api initialized (async)
+Sep 26 12:54:02 khansman kernel: Block layer SCSI generic (bsg) driver version 0.4 loaded (major 248)
+Sep 26 12:54:02 khansman kernel: io scheduler noop registered
+Sep 26 12:54:02 khansman kernel: io scheduler deadline registered
+Sep 26 12:54:02 khansman kernel: io scheduler cfq registered (default)
+Sep 26 12:54:02 khansman kernel: io scheduler mq-deadline registered
+Sep 26 12:54:02 khansman kernel: io scheduler kyber registered
+Sep 26 12:54:02 khansman kernel: io scheduler bfq registered
+Sep 26 12:54:02 khansman kernel: intel_idle: does not run on family 6 model 71
+Sep 26 12:54:02 khansman kernel: ACPI: AC Adapter [AC] (on-line)
+Sep 26 12:54:02 khansman kernel: input: Power Button as /devices/LNXSYSTM:00/LNXPWRBN:00/input/input0
+Sep 26 12:54:02 khansman kernel: ACPI: Power Button [PWRF]
+Sep 26 12:54:02 khansman kernel: input: Sleep Button as /devices/LNXSYSTM:00/LNXSLPBN:00/input/input1
+Sep 26 12:54:02 khansman kernel: ACPI: Sleep Button [SLPF]
+Sep 26 12:54:02 khansman kernel: ACPI: Video Device [GFX0] (multi-head: yes  rom: no  post: no)
+Sep 26 12:54:02 khansman kernel: input: Video Bus as /devices/LNXSYSTM:00/LNXSYBUS:00/PNP0A03:00/LNXVIDEO:00/input/input2
+Sep 26 12:54:02 khansman kernel: Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+Sep 26 12:54:02 khansman kernel: Non-volatile memory driver v1.3
+Sep 26 12:54:02 khansman kernel: Linux agpgart interface v0.103
+Sep 26 12:54:02 khansman kernel: [drm] Initialized vgem 1.0.0 20120112 for virtual device on minor 0
+Sep 26 12:54:02 khansman kernel: loop: module loaded
+Sep 26 12:54:02 khansman kernel: ahci 0000:00:0d.0: version 3.0
+Sep 26 12:54:02 khansman kernel: ahci 0000:00:0d.0: SSS flag set, parallel bus scan disabled
+Sep 26 12:54:02 khansman kernel: ahci 0000:00:0d.0: AHCI 0001.0100 32 slots 1 ports 3 Gbps 0x1 impl SATA mode
+Sep 26 12:54:02 khansman kernel: ahci 0000:00:0d.0: flags: 64bit ncq stag only ccc 
+Sep 26 12:54:02 khansman kernel: scsi host0: ahci
+Sep 26 12:54:02 khansman kernel: ata1: SATA max UDMA/133 abar m8192@0xf0806000 port 0xf0806100 irq 21
+Sep 26 12:54:02 khansman kernel: ata_piix 0000:00:01.1: version 2.13
+Sep 26 12:54:02 khansman kernel: scsi host1: ata_piix
+Sep 26 12:54:02 khansman kernel: scsi host2: ata_piix
+Sep 26 12:54:02 khansman kernel: ata2: PATA max UDMA/33 cmd 0x1f0 ctl 0x3f6 bmdma 0xd000 irq 14
+Sep 26 12:54:02 khansman kernel: ata3: PATA max UDMA/33 cmd 0x170 ctl 0x376 bmdma 0xd008 irq 15
+Sep 26 12:54:02 khansman kernel: libphy: Fixed MDIO Bus: probed
+Sep 26 12:54:02 khansman kernel: e100: Intel(R) PRO/100 Network Driver, 3.5.24-k2-NAPI
+Sep 26 12:54:02 khansman kernel: e100: Copyright(c) 1999-2006 Intel Corporation
+Sep 26 12:54:02 khansman kernel: e1000: Intel(R) PRO/1000 Network Driver - version 7.3.21-k8-NAPI
+Sep 26 12:54:02 khansman kernel: e1000: Copyright (c) 1999-2006 Intel Corporation.
+Sep 26 12:54:02 khansman kernel: ata3.00: ATAPI: VBOX CD-ROM, 1.0, max UDMA/133
+Sep 26 12:54:02 khansman kernel: ata3.00: configured for UDMA/33
+Sep 26 12:54:02 khansman kernel: ata1: SATA link up 3.0 Gbps (SStatus 123 SControl 300)
+Sep 26 12:54:02 khansman kernel: ata1.00: ATA-6: VBOX HARDDISK, 1.0, max UDMA/133
+Sep 26 12:54:02 khansman kernel: ata1.00: 43098112 sectors, multi 128: LBA48 NCQ (depth 31/32)
+Sep 26 12:54:02 khansman kernel: ata1.00: configured for UDMA/133
+Sep 26 12:54:02 khansman kernel: scsi 0:0:0:0: Direct-Access     ATA      VBOX HARDDISK    1.0  PQ: 0 ANSI: 5
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: Attached scsi generic sg0 type 0
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: [sda] 43098112 512-byte logical blocks: (22.1 GB/20.6 GiB)
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: [sda] Write Protect is off
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: [sda] Mode Sense: 00 3a 00 00
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+Sep 26 12:54:02 khansman kernel: scsi 2:0:0:0: CD-ROM            VBOX     CD-ROM           1.0  PQ: 0 ANSI: 5
+Sep 26 12:54:02 khansman kernel: sr 2:0:0:0: [sr0] scsi3-mmc drive: 32x/32x xa/form2 tray
+Sep 26 12:54:02 khansman kernel: cdrom: Uniform CD-ROM driver Revision: 3.20
+Sep 26 12:54:02 khansman kernel: sr 2:0:0:0: Attached scsi CD-ROM sr0
+Sep 26 12:54:02 khansman kernel: sr 2:0:0:0: Attached scsi generic sg1 type 5
+Sep 26 12:54:02 khansman kernel: e1000 0000:00:03.0 eth0: (PCI:33MHz:32-bit) 08:00:27:83:82:99
+Sep 26 12:54:02 khansman kernel: e1000 0000:00:03.0 eth0: Intel(R) PRO/1000 Network Connection
+Sep 26 12:54:02 khansman kernel: e1000e: Intel(R) PRO/1000 Network Driver - 3.2.6-k
+Sep 26 12:54:02 khansman kernel: e1000e: Copyright(c) 1999 - 2015 Intel Corporation.
+Sep 26 12:54:02 khansman kernel: sky2: driver version 1.30
+Sep 26 12:54:02 khansman kernel: ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+Sep 26 12:54:02 khansman kernel: ehci-pci: EHCI PCI platform driver
+Sep 26 12:54:02 khansman kernel: ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+Sep 26 12:54:02 khansman kernel: ohci-pci: OHCI PCI platform driver
+Sep 26 12:54:02 khansman kernel: ohci-pci 0000:00:06.0: OHCI PCI host controller
+Sep 26 12:54:02 khansman kernel: ohci-pci 0000:00:06.0: new USB bus registered, assigned bus number 1
+Sep 26 12:54:02 khansman kernel: ohci-pci 0000:00:06.0: irq 22, io mem 0xf0804000
+Sep 26 12:54:02 khansman kernel:  sda: sda1 sda2 sda3
+Sep 26 12:54:02 khansman kernel: sd 0:0:0:0: [sda] Attached SCSI disk
+Sep 26 12:54:02 khansman kernel: usb usb1: New USB device found, idVendor=1d6b, idProduct=0001
+Sep 26 12:54:02 khansman kernel: usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+Sep 26 12:54:02 khansman kernel: usb usb1: Product: OHCI PCI host controller
+Sep 26 12:54:02 khansman kernel: usb usb1: Manufacturer: Linux 4.14.0-rc2khansman-lfs-0.0.2 ohci_hcd
+Sep 26 12:54:02 khansman kernel: usb usb1: SerialNumber: 0000:00:06.0
+Sep 26 12:54:02 khansman kernel: hub 1-0:1.0: USB hub found
+Sep 26 12:54:02 khansman kernel: hub 1-0:1.0: 12 ports detected
+Sep 26 12:54:02 khansman kernel: uhci_hcd: USB Universal Host Controller Interface driver
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver usblp
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver usb-storage
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver ums-realtek
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver appledisplay
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver usbtest
+Sep 26 12:54:02 khansman kernel: i8042: PNP: PS/2 Controller [PNP0303:PS2K,PNP0f03:PS2M] at 0x60,0x64 irq 1,12
+Sep 26 12:54:02 khansman kernel: serio: i8042 KBD port at 0x60,0x64 irq 1
+Sep 26 12:54:02 khansman kernel: serio: i8042 AUX port at 0x60,0x64 irq 12
+Sep 26 12:54:02 khansman kernel: hv_vmbus: registering driver hyperv_keyboard
+Sep 26 12:54:02 khansman kernel: mousedev: PS/2 mouse device common for all mice
+Sep 26 12:54:02 khansman kernel: input: AT Translated Set 2 keyboard as /devices/platform/i8042/serio0/input/input3
+Sep 26 12:54:02 khansman kernel: rtc_cmos rtc_cmos: rtc core: registered rtc_cmos as rtc0
+Sep 26 12:54:02 khansman kernel: rtc_cmos rtc_cmos: alarms up to one day, 114 bytes nvram
+Sep 26 12:54:02 khansman kernel: IR NEC protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR RC5(x/sz) protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR RC6 protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR JVC protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR Sony protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR SANYO protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR Sharp protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR MCE Keyboard/mouse protocol handler initialized
+Sep 26 12:54:02 khansman kernel: IR XMP protocol handler initialized
+Sep 26 12:54:02 khansman kernel: device-mapper: ioctl: 4.36.0-ioctl (2017-06-09) initialised: dm-devel@redhat.com
+Sep 26 12:54:02 khansman kernel: device-mapper: raid: Loading target version 1.12.1
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver ushc
+Sep 26 12:54:02 khansman kernel: hidraw: raw HID events driver (C) Jiri Kosina
+Sep 26 12:54:02 khansman kernel: usbcore: registered new interface driver usbhid
+Sep 26 12:54:02 khansman kernel: usbhid: USB HID core driver
+Sep 26 12:54:02 khansman kernel: hv_utils: Registering HyperV Utility Driver
+Sep 26 12:54:02 khansman kernel: hv_vmbus: registering driver hv_util
+Sep 26 12:54:02 khansman kernel: hv_vmbus: registering driver hv_balloon
+Sep 26 12:54:02 khansman kernel: Netfilter messages via NETLINK v0.30.
+Sep 26 12:54:02 khansman kernel: kworker/u8:3 (159) used greatest stack depth: 14800 bytes left
+Sep 26 12:54:02 khansman kernel: nfnl_acct: registering with nfnetlink.
+Sep 26 12:54:02 khansman kernel: nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+Sep 26 12:54:02 khansman kernel: ctnetlink v0.93: registering with nfnetlink.
+Sep 26 12:54:02 khansman kernel: IPVS: Registered protocols (TCP, UDP, SCTP, AH, ESP)
+Sep 26 12:54:02 khansman kernel: IPVS: Connection hash table configured (size=4096, memory=64Kbytes)
+Sep 26 12:54:02 khansman kernel: IPVS: Each connection entry needs 296 bytes at least
+Sep 26 12:54:02 khansman kernel: IPVS: ipvs loaded.
+Sep 26 12:54:02 khansman kernel: ipip: IPv4 and MPLS over IPv4 tunneling driver
+Sep 26 12:54:02 khansman kernel: gre: GRE over IPv4 demultiplexor driver
+Sep 26 12:54:02 khansman kernel: ip_gre: GRE over IPv4 tunneling driver
+Sep 26 12:54:02 khansman kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+Sep 26 12:54:02 khansman kernel: Initializing XFRM netlink socket
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 10
+Sep 26 12:54:02 khansman kernel: Segment Routing with IPv6
+Sep 26 12:54:02 khansman kernel: mip6: Mobile IPv6
+Sep 26 12:54:02 khansman kernel: ip6_tables: (C) 2000-2006 Netfilter Core Team
+Sep 26 12:54:02 khansman kernel: sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 17
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 15
+Sep 26 12:54:02 khansman kernel: bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+Sep 26 12:54:02 khansman kernel: cryptomgr_probe (164) used greatest stack depth: 14776 bytes left
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 33
+Sep 26 12:54:02 khansman kernel: Key type rxrpc registered
+Sep 26 12:54:02 khansman kernel: Key type rxrpc_s registered
+Sep 26 12:54:02 khansman kernel: l2tp_core: L2TP core driver, V2.0
+Sep 26 12:54:02 khansman kernel: l2tp_netlink: L2TP netlink interface
+Sep 26 12:54:02 khansman kernel: NET4: DECnet for Linux: V.2.5.68s (C) 1995-2003 Linux DECnet Project Team
+Sep 26 12:54:02 khansman kernel: DECnet: Routing cache hash table of 1024 buckets, 16Kbytes
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 12
+Sep 26 12:54:02 khansman kernel: 8021q: 802.1Q VLAN Support v1.8
+Sep 26 12:54:02 khansman kernel: NET: Registered protocol family 36
+Sep 26 12:54:02 khansman kernel: Key type dns_resolver registered
+Sep 26 12:54:02 khansman kernel: sched_clock: Marking stable (718132250, 0)->(883125497, -164993247)
+Sep 26 12:54:02 khansman kernel: registered taskstats version 1
+Sep 26 12:54:02 khansman kernel:   Magic number: 1:372:882
+Sep 26 12:54:02 khansman kernel: console [netcon0] enabled
+Sep 26 12:54:02 khansman kernel: netconsole: network logging started
+Sep 26 12:54:02 khansman kernel: ALSA device list:
+Sep 26 12:54:02 khansman kernel:   No soundcards found.
+Sep 26 12:54:02 khansman kernel: input: ImExPS/2 Generic Explorer Mouse as /devices/platform/i8042/serio1/input/input5
+Sep 26 12:54:02 khansman kernel: md: Waiting for all devices to be available before autodetect
+Sep 26 12:54:02 khansman kernel: md: If you don't use raid, use raid=noautodetect
+Sep 26 12:54:02 khansman kernel: md: Autodetecting RAID arrays.
+Sep 26 12:54:02 khansman kernel: md: autorun ...
+Sep 26 12:54:02 khansman kernel: md: ... autorun DONE.
+Sep 26 12:54:02 khansman kernel: EXT4-fs (sda3): couldn't mount as ext3 due to feature incompatibilities
+Sep 26 12:54:02 khansman kernel: EXT4-fs (sda3): couldn't mount as ext2 due to feature incompatibilities
+Sep 26 12:54:02 khansman kernel: EXT4-fs (sda3): mounted filesystem with ordered data mode. Opts: (null)
+Sep 26 12:54:02 khansman kernel: VFS: Mounted root (ext4 filesystem) readonly on device 8:3.
+Sep 26 12:54:02 khansman kernel: devtmpfs: mounted
+Sep 26 12:54:02 khansman kernel: Freeing unused kernel memory: 1468K
+Sep 26 12:54:02 khansman kernel: Write protecting the kernel read-only data: 20480k
+Sep 26 12:54:02 khansman kernel: Freeing unused kernel memory: 564K
+Sep 26 12:54:02 khansman kernel: Freeing unused kernel memory: 1976K
+Sep 26 12:54:02 khansman kernel: usb 1-1: new full-speed USB device number 2 using ohci-pci
+Sep 26 12:54:02 khansman kernel: tsc: Refined TSC clocksource calibration: 2794.719 MHz
+Sep 26 12:54:02 khansman kernel: clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x2848c41421e, max_idle_ns: 440795254154 ns
+Sep 26 12:54:02 khansman kernel: usb 1-1: New USB device found, idVendor=80ee, idProduct=0021
+Sep 26 12:54:02 khansman kernel: usb 1-1: New USB device strings: Mfr=1, Product=3, SerialNumber=0
+Sep 26 12:54:02 khansman kernel: usb 1-1: Product: USB Tablet
+Sep 26 12:54:02 khansman kernel: usb 1-1: Manufacturer: VirtualBox
+Sep 26 12:54:02 khansman kernel: input: VirtualBox USB Tablet as /devices/pci0000:00/0000:00:06.0/usb1/1-1/1-1:1.0/0003:80EE:0021.0001/input/input6
+Sep 26 12:54:02 khansman kernel: hid-generic 0003:80EE:0021.0001: input,hidraw0: USB HID v1.10 Mouse [VirtualBox USB Tablet] on usb-0000:00:06.0-1/input0
+Sep 26 12:54:02 khansman kernel: random: crng init done
+Sep 26 12:54:02 khansman systemd[1]: systemd 232 running in system mode. (+PAM -AUDIT -SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP -LIBCRYPTSETUP -GCRYPT +GNUTLS +ACL +XZ -LZ4 -SECCOMP +BLKID -ELFUTILS +KMOD -IDN)
+Sep 26 12:54:02 khansman systemd[1]: Detected virtualization oracle.
+Sep 26 12:54:02 khansman systemd[1]: Detected architecture x86-64.
+Sep 26 12:54:02 khansman systemd[1]: Set hostname to <khansman>.
+Sep 26 12:54:02 khansman kernel: systemd-debug-g (172) used greatest stack depth: 13584 bytes left
+Sep 26 12:54:02 khansman systemd[1]: Reached target Host and Network Name Lookups.
+Sep 26 12:54:02 khansman systemd[1]: Set up automount Arbitrary Executable File Formats File System Automount Point.
+Sep 26 12:54:02 khansman systemd[1]: Listening on Journal Socket (/dev/log).
+Sep 26 12:54:02 khansman systemd[1]: Created slice System Slice.
+Sep 26 12:54:02 khansman systemd[1]: Mounting Huge Pages File System...
+Sep 26 12:54:02 khansman systemd[1]: Mounting RPC Pipe File System...
+Sep 26 12:54:02 khansman kernel: mount (182) used greatest stack depth: 13000 bytes left
+Sep 26 12:54:02 khansman systemd-journald[194]: Journal started
+Sep 26 12:54:02 khansman systemd-journald[194]: Runtime journal (/run/log/journal/7c41de266225470195fed5c4b74863c2) is 0B, max 0B, 0B free.
+Sep 26 12:54:02 khansman systemd-sysctl[188]: Couldn't write 'fq_codel' to 'net/core/default_qdisc', ignoring: No such file or directory
+Sep 26 12:54:02 khansman systemd-fsck[189]: /dev/sda3: clean, 288879/1146880 files, 2095716/4585984 blocks
+Sep 26 12:54:02 khansman systemd[1]: Started File System Check on Root Device.
+Sep 26 12:54:02 khansman systemd[1]: Starting Remount Root and Kernel File Systems...
+Sep 26 12:54:02 khansman kernel: EXT4-fs (sda3): re-mounted. Opts: (null)
+Sep 26 12:54:02 khansman systemd[1]: Started Remount Root and Kernel File Systems.
+Sep 26 12:54:02 khansman systemd[1]: Starting Flush Journal to Persistent Storage...
+Sep 26 12:54:02 khansman systemd[1]: Starting Load/Save Random Seed...
+Sep 26 12:54:03 khansman systemd[1]: Starting udev Coldplug all Devices...
+Sep 26 12:54:03 khansman systemd-journald[194]: Time spent on flushing to /var is 512.075ms for 490 entries.
+Sep 26 12:54:03 khansman systemd-journald[194]: System journal (/var/log/journal/7c41de266225470195fed5c4b74863c2) is 0B, max 0B, 0B free.
+Sep 26 12:54:05 khansman kernel: e1000 0000:00:03.0 enp0s3: renamed from eth0
+Sep 26 12:54:03 khansman systemd[1]: Started Load/Save Random Seed.
+Sep 26 12:54:03 khansman systemd[1]: Started udev Coldplug all Devices.
+Sep 26 12:54:03 khansman systemd[1]: Started Create Static Device Nodes in /dev.
+Sep 26 12:54:03 khansman systemd[1]: Starting udev Kernel Device Manager...
+Sep 26 12:54:03 khansman systemd[1]: Reached target Local File Systems (Pre).
+Sep 26 12:54:03 khansman systemd[1]: Started udev Kernel Device Manager.
+Sep 26 12:54:04 khansman systemd-udevd[216]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[209]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[214]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[215]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[215]: Could not generate persistent MAC address for ip6tnl0: No such file or directory
+Sep 26 12:54:04 khansman systemd-udevd[209]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[209]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd-udevd[214]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd[1]: Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+Sep 26 12:54:04 khansman systemd-udevd[218]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:04 khansman systemd[1]: Found device 82540EM Gigabit Ethernet Controller (PRO/1000 MT Desktop Adapter).
+Sep 26 12:54:05 khansman systemd[1]: Found device VBOX_HARDDISK 1.
+Sep 26 12:54:05 khansman systemd[1]: boot.mount: Directory /boot to mount over is not empty, mounting anyway.
+Sep 26 12:54:05 khansman systemd[1]: Mounting /boot...
+Sep 26 12:54:05 khansman systemd[1]: Started Flush Journal to Persistent Storage.
+Sep 26 12:54:05 khansman systemd[1]: Mounted /boot.
+Sep 26 12:54:05 khansman kernel: EXT4-fs (sda1): mounted filesystem with ordered data mode. Opts: (null)
+Sep 26 12:54:05 khansman systemd[1]: Found device VBOX_HARDDISK 2.
+Sep 26 12:54:05 khansman systemd[1]: Activating swap /dev/sda2...
+Sep 26 12:54:05 khansman kernel: Adding 2155516k swap on /dev/sda2.  Priority:1 extents:1 across:2155516k 
+Sep 26 12:54:05 khansman systemd[1]: Activated swap /dev/sda2.
+Sep 26 12:54:05 khansman systemd[1]: Reached target Swap.
+Sep 26 12:54:05 khansman systemd[1]: tmp.mount: Directory /tmp to mount over is not empty, mounting anyway.
+Sep 26 12:54:05 khansman systemd[1]: Mounting Temporary Directory...
+Sep 26 12:54:05 khansman systemd[1]: Mounted Temporary Directory.
+Sep 26 12:54:05 khansman systemd[1]: Reached target Local File Systems.
+Sep 26 12:54:05 khansman systemd[1]: Starting Create Volatile Files and Directories...
+Sep 26 12:54:05 khansman systemd-tmpfiles[237]: [/usr/lib/tmpfiles.d/man-db.conf:1] Unknown user 'man'.
+Sep 26 12:54:05 khansman systemd-tmpfiles[237]: Cannot set file attribute for '/var/log/journal', value=0x00800000, mask=0x00800000: Operation not supported
+Sep 26 12:54:05 khansman systemd-tmpfiles[237]: Cannot set file attribute for '/var/log/journal/7c41de266225470195fed5c4b74863c2', value=0x00800000, mask=0x00800000: Operation not supported
+Sep 26 12:54:05 khansman systemd[1]: systemd-tmpfiles-setup.service: Main process exited, code=exited, status=1/FAILURE
+Sep 26 12:54:05 khansman systemd[1]: Failed to start Create Volatile Files and Directories.
+Sep 26 12:54:05 khansman systemd[1]: systemd-tmpfiles-setup.service: Unit entered failed state.
+Sep 26 12:54:05 khansman systemd[1]: systemd-tmpfiles-setup.service: Failed with result 'exit-code'.
+Sep 26 12:54:05 khansman systemd[1]: Starting Update UTMP about System Boot/Shutdown...
+Sep 26 12:54:05 khansman systemd[1]: Started Update UTMP about System Boot/Shutdown.
+Sep 26 12:54:05 khansman systemd[1]: Reached target System Initialization.
+Sep 26 12:54:05 khansman systemd[1]: Listening on RPC Bind Server Activation Socket.
+Sep 26 12:54:05 khansman systemd[1]: Started Daily Cleanup of Temporary Directories.
+Sep 26 12:54:05 khansman systemd[1]: Reached target Timers.
+Sep 26 12:54:05 khansman systemd[1]: Listening on D-Bus System Message Bus Socket.
+Sep 26 12:54:05 khansman systemd[1]: Reached target Sockets.
+Sep 26 12:54:05 khansman systemd[1]: Reached target Basic System.
+Sep 26 12:54:05 khansman systemd[1]: Started A file transfer program to keep remote files in sync.
+Sep 26 12:54:05 khansman systemd[1]: Starting ISC DHCP Client on enp0s3...
+Sep 26 12:54:05 khansman systemd[1]: Starting Cyrus SASL authentication daemon...
+Sep 26 12:54:05 khansman systemd[1]: Reached target Containers.
+Sep 26 12:54:05 khansman systemd[1]: Started D-Bus System Message Bus.
+Sep 26 12:54:06 khansman saslauthd[244]: detach_tty      : master pid is: 244
+Sep 26 12:54:06 khansman rsyncd[239]: rsyncd version 3.1.2 starting, listening on port 873
+Sep 26 12:54:06 khansman saslauthd[244]: ipc_init        : listening on socket: /var/run/saslauthd/mux
+Sep 26 12:54:06 khansman systemd[1]: Starting Network Service...
+Sep 26 12:54:06 khansman systemd[1]: Starting Login Service...
+Sep 26 12:54:06 khansman systemd[1]: Started Cyrus SASL authentication daemon.
+Sep 26 12:54:06 khansman kernel: IPv6: ADDRCONF(NETDEV_UP): enp0s3: link is not ready
+Sep 26 12:54:06 khansman kernel: 8021q: adding VLAN 0 to HW filter on device enp0s3
+Sep 26 12:54:06 khansman kernel: e1000: enp0s3 NIC Link is Up 1000 Mbps Full Duplex, Flow Control: RX
+Sep 26 12:54:06 khansman kernel: ip (250) used greatest stack depth: 12864 bytes left
+Sep 26 12:54:06 khansman kernel: IPv6: ADDRCONF(NETDEV_CHANGE): enp0s3: link becomes ready
+Sep 26 12:54:06 khansman systemd[1]: Started Login Service.
+Sep 26 12:54:06 khansman systemd-logind[252]: New seat seat0.
+Sep 26 12:54:06 khansman systemd-logind[252]: Watching system buttons on /dev/input/event0 (Power Button)
+Sep 26 12:54:06 khansman systemd-logind[252]: Watching system buttons on /dev/input/event1 (Sleep Button)
+Sep 26 12:54:06 khansman systemd-logind[252]: Watching system buttons on /dev/input/event2 (Video Bus)
+Sep 26 12:54:06 khansman systemd-udevd[258]: link_config: could not find feature: tx-udp-fragmentation
+Sep 26 12:54:06 khansman systemd-networkd[251]: br0: netdev ready
+Sep 26 12:54:06 khansman systemd-networkd[251]: Enumeration completed
+Sep 26 12:54:06 khansman systemd[1]: Started Network Service.
+Sep 26 12:54:06 khansman systemd-networkd[251]: enp0s3: Renamed to eth0
+Sep 26 12:54:06 khansman systemd-networkd[251]: eth0: Lost carrier
+Sep 26 12:54:06 khansman systemd-networkd[251]: eth0: Renamed to enp0s3
+Sep 26 12:54:06 khansman systemd-networkd[251]: enp0s3: Gained carrier
+Sep 26 12:54:06 khansman systemd-networkd[251]: br0: IPv6 enabled for interface: Success
+Sep 26 12:54:06 khansman kernel: IPv6: ADDRCONF(NETDEV_UP): br0: link is not ready
+Sep 26 12:54:06 khansman dhclient[240]: DHCPDISCOVER on enp0s3 to 255.255.255.255 port 67 interval 6
+Sep 26 12:54:06 khansman dhclient[240]: DHCPREQUEST on enp0s3 to 255.255.255.255 port 67
+Sep 26 12:54:06 khansman dhclient[240]: DHCPOFFER from 10.0.2.2
+Sep 26 12:54:06 khansman dhclient[240]: DHCPACK from 10.0.2.2
+Sep 26 12:54:06 khansman dhclient[240]: bound to 10.0.2.15 -- renewal in 41361 seconds.
+Sep 26 12:54:06 khansman systemd[1]: Started ISC DHCP Client on enp0s3.
+Sep 26 12:54:06 khansman systemd[1]: Reached target Network.
+Sep 26 12:54:07 khansman systemd[1]: Starting Network Time Protocol daemon...
+Sep 26 12:54:07 khansman systemd[1]: Starting NFS status monitor for NFSv2/3 locking....
+Sep 26 12:54:07 khansman systemd[270]: rpc-statd.service: Failed at step EXEC spawning /sbin/rpc.statd: No such file or directory
+Sep 26 12:54:07 khansman systemd[1]: Starting Network Name Resolution...
+Sep 26 12:54:07 khansman systemd[1]: Reached target Network is Online.
+Sep 26 12:54:07 khansman systemd[1]: Starting Notify NFS peers of a restart...
+Sep 26 12:54:07 khansman systemd[272]: rpc-statd-notify.service: Failed at step EXEC spawning /sbin/sm-notify: No such file or directory
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd.service: Control process exited, code=exited status=203
+Sep 26 12:54:07 khansman systemd[1]: Failed to start NFS status monitor for NFSv2/3 locking..
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd.service: Unit entered failed state.
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd.service: Failed with result 'exit-code'.
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd-notify.service: Control process exited, code=exited status=203
+Sep 26 12:54:07 khansman systemd[1]: Failed to start Notify NFS peers of a restart.
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd-notify.service: Unit entered failed state.
+Sep 26 12:54:07 khansman systemd[1]: rpc-statd-notify.service: Failed with result 'exit-code'.
+Sep 26 12:54:07 khansman systemd[1]: Reached target NFS client services.
+Sep 26 12:54:07 khansman systemd[1]: Reached target Remote File Systems (Pre).
+Sep 26 12:54:07 khansman systemd[1]: Reached target Remote File Systems.
+Sep 26 12:54:07 khansman systemd[1]: Starting Permit User Sessions...
+Sep 26 12:54:07 khansman systemd[1]: Started Permit User Sessions.
+Sep 26 12:54:07 khansman systemd[1]: Started Getty on tty1.
+Sep 26 12:54:07 khansman systemd[1]: Reached target Login Prompts.
+Sep 26 12:54:07 khansman systemd-resolved[271]: Positive Trust Anchors:
+Sep 26 12:54:07 khansman systemd-resolved[271]: . IN DS 19036 8 2 49aac11d7b6f6446702e54a1607371607a1a41855200fd2ce1cdde32f24e8fb5
+Sep 26 12:54:07 khansman systemd-resolved[271]: Negative trust anchors: 10.in-addr.arpa 16.172.in-addr.arpa 17.172.in-addr.arpa 18.172.in-addr.arpa 19.172.in-addr.arpa 20.172.in-addr.arpa 21.172.in-addr.arpa 22.172.in-addr.arpa 23.172.in-addr.arpa 24.172.in-addr.arpa 25.172.in-addr.arpa 26.172.in-addr.arpa 27.172.in-addr.arpa 28.172.in-addr.arpa 29.172.in-addr.arpa 30.172.in-addr.arpa 31.172.in-addr.arpa 168.192.in-addr.arpa d.f.ip6.arpa corp home internal intranet lan local private test
+Sep 26 12:54:07 khansman systemd-resolved[271]: Using system hostname 'khansman'.
+Sep 26 12:54:07 khansman systemd-resolved[271]: Switching to system DNS server 10.204.0.203.
+Sep 26 12:54:07 khansman systemd[1]: Started Network Name Resolution.
+Sep 26 12:54:07 khansman ntpd[269]: ntpd 4.2.8p9@1.3265-o Sun Aug 20 17:04:26 UTC 2017 (1): Starting
+Sep 26 12:54:07 khansman ntpd[269]: Command line: /usr/sbin/ntpd -g -u ntp:ntp
+Sep 26 12:54:07 khansman systemd[1]: Started Network Time Protocol daemon.
+Sep 26 12:54:07 khansman systemd[1]: Reached target Multi-User System.
+Sep 26 12:54:07 khansman systemd[1]: Reached target Graphical Interface.
+Sep 26 12:54:07 khansman systemd[1]: Starting Update UTMP about System Runlevel Changes...
+Sep 26 12:54:07 khansman systemd[1]: Started Update UTMP about System Runlevel Changes.
+Sep 26 12:54:07 khansman systemd[1]: Startup finished in 1.463s (kernel) + 6.817s (userspace) = 8.280s.
+Sep 26 12:54:07 khansman ntpd[276]: proto: precision = 0.047 usec (-24)
+Sep 26 12:54:07 khansman ntpd[276]: leapsecond file ('/etc/ntp.leapseconds'): stat failed: No such file or directory
+Sep 26 12:54:07 khansman ntpd[276]: Listen and drop on 0 v6wildcard [::]:123
+Sep 26 12:54:07 khansman ntpd[276]: Listen and drop on 1 v4wildcard 0.0.0.0:123
+Sep 26 12:54:07 khansman ntpd[276]: Listen normally on 2 lo 127.0.0.1:123
+Sep 26 12:54:07 khansman ntpd[276]: Listen normally on 3 enp0s3 10.0.2.15:123
+Sep 26 12:54:07 khansman ntpd[276]: Listen normally on 4 lo [::1]:123
+Sep 26 12:54:07 khansman ntpd[276]: bind(21) AF_INET6 fe80::a00:27ff:fe83:8299%2#123 flags 0x11 failed: Cannot assign requested address
+Sep 26 12:54:07 khansman ntpd[276]: unable to create socket on enp0s3 (5) for fe80::a00:27ff:fe83:8299%2#123
+Sep 26 12:54:07 khansman ntpd[276]: failed to init interface for address fe80::a00:27ff:fe83:8299%2
+Sep 26 12:54:07 khansman ntpd[276]: Listening on routing socket on fd #21 for interface updates
+Sep 26 12:54:08 khansman ntpd[276]: bind(24) AF_INET6 fe80::a00:27ff:fe83:8299%2#123 flags 0x11 failed: Cannot assign requested address
+Sep 26 12:54:08 khansman ntpd[276]: unable to create socket on enp0s3 (6) for fe80::a00:27ff:fe83:8299%2#123
+Sep 26 12:54:08 khansman ntpd[276]: failed to init interface for address fe80::a00:27ff:fe83:8299%2
+Sep 26 12:54:08 khansman systemd-networkd[251]: enp0s3: Gained IPv6LL
+Sep 26 12:54:10 khansman ntpd[276]: Listen normally on 7 enp0s3 [fe80::a00:27ff:fe83:8299%2]:123
+Sep 26 12:54:10 khansman ntpd[276]: new interface(s) found: waking up resolver
+Sep 26 12:54:11 khansman login[274]: pam_unix(login:session): session opened for user root by LOGIN(uid=0)
+Sep 26 12:54:11 khansman systemd[1]: Created slice User Slice of root.
+Sep 26 12:54:11 khansman systemd[1]: Starting User Manager for UID 0...
+Sep 26 12:54:11 khansman systemd-logind[252]: New session c1 of user root.
+Sep 26 12:54:11 khansman systemd[1]: Started Session c1 of user root.
+Sep 26 12:54:11 khansman systemd[280]: pam_unix(systemd-user:session): session opened for user root by (uid=0)
+Sep 26 12:54:11 khansman systemd[280]: Reached target Sockets.
+Sep 26 12:54:11 khansman systemd[280]: Reached target Timers.
+Sep 26 12:54:11 khansman systemd[280]: Reached target Paths.
+Sep 26 12:54:11 khansman systemd[280]: Reached target Basic System.
+Sep 26 12:54:11 khansman systemd[280]: Reached target Default.
+Sep 26 12:54:11 khansman systemd[280]: Startup finished in 98ms.
+Sep 26 12:54:11 khansman systemd[1]: Started User Manager for UID 0.
+Sep 26 12:54:11 khansman login[283]: ROOT LOGIN  on '/dev/tty1'
+Sep 26 12:56:23 khansman systemd[280]: Time has been changed
+Sep 26 12:56:23 khansman systemd[1]: Time has been changed
+Sep 26 12:56:23 khansman ntpd[276]: receive: Unexpected origin timestamp 0xdd74b116.7d8885d6 does not match aorg 0000000000.00000000 from server@27.124.125.251 xmt 0xdd74b0d7.162b42f4
+Sep 26 13:06:49 khansman systemd[1]: Started Getty on tty6.
+Sep 26 13:06:56 khansman login[315]: pam_unix(login:session): session opened for user kalilo by LOGIN(uid=0)
+Sep 26 13:06:56 khansman systemd[1]: Created slice User Slice of kalilo.
+Sep 26 13:06:56 khansman systemd[1]: Starting User Manager for UID 1002...
+Sep 26 13:06:56 khansman systemd[1]: Started Session c2 of user kalilo.
+Sep 26 13:06:56 khansman systemd[316]: pam_unix(systemd-user:session): session opened for user kalilo by (uid=0)
+Sep 26 13:06:56 khansman systemd-logind[252]: New session c2 of user kalilo.
+Sep 26 13:06:56 khansman systemd[316]: Reached target Timers.
+Sep 26 13:06:56 khansman systemd[316]: Reached target Sockets.
+Sep 26 13:06:56 khansman systemd[316]: Reached target Paths.
+Sep 26 13:06:56 khansman systemd[316]: Reached target Basic System.
+Sep 26 13:06:56 khansman systemd[316]: Reached target Default.
+Sep 26 13:06:56 khansman systemd[316]: Startup finished in 6ms.
+Sep 26 13:06:56 khansman systemd[1]: Started User Manager for UID 1002.
+Sep 26 13:08:08 khansman systemd[1]: Starting Cleanup of Temporary Directories...
+Sep 26 13:08:08 khansman systemd-tmpfiles[334]: [/usr/lib/tmpfiles.d/man-db.conf:1] Unknown user 'man'.
+Sep 26 13:08:08 khansman systemd[1]: systemd-tmpfiles-clean.service: Main process exited, code=exited, status=1/FAILURE
+Sep 26 13:08:08 khansman systemd[1]: Failed to start Cleanup of Temporary Directories.
+Sep 26 13:08:08 khansman systemd[1]: systemd-tmpfiles-clean.service: Unit entered failed state.
+Sep 26 13:08:08 khansman systemd[1]: systemd-tmpfiles-clean.service: Failed with result 'exit-code'.
+Sep 26 13:10:23 khansman su[343]: pam_unix(su:auth): authentication failure; logname=kalilo uid=1002 euid=0 tty=/dev/tty6 ruser=kalilo rhost=  user=root
+Sep 26 13:10:25 khansman su[343]: pam_authenticate: Authentication failure
+Sep 26 13:10:25 khansman su[343]: FAILED su for root by kalilo
+Sep 26 13:10:25 khansman su[343]: - /dev/tty6 kalilo:root
+Sep 26 13:10:30 khansman su[344]: Successful su for root by kalilo
+Sep 26 13:10:30 khansman su[344]: + /dev/tty6 kalilo:root
+Sep 26 13:10:30 khansman su[344]: pam_unix(su:session): session opened for user root by kalilo(uid=1002)
+Sep 26 13:10:30 khansman su[344]: pam_systemd(su:session): Cannot create session: Already running in a session
